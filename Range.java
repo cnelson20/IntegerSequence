@@ -20,7 +20,7 @@ public class Range implements IntegerSequence() {
       current++;
       return current - 1;
     } else {
-      throw new NoSuchElementException("No elements left in range[" + start + "," + end + "]");
+      throw new NoSuchElementException("No elements left in range [" + start + "," + end + "]");
     }
   }
 }
