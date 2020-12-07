@@ -8,8 +8,18 @@ public class ArraySequence implements IntegerSequence{
     data = other;
     currentIndex = 0;
   }
+  public ArraySequence(IntegerSequence other) {
+    data = new int[other.length()];
+    for (int i = 0; other.hasNext() == true; i++) {
+      data[i] = other.next();
+    }
+  }
   public boolean hasNext() {
     return currentIndex < data.length;
+  }
+  public int next() {
+    currentIndex++;
+    return data[currentIndex-1];
   }
   public int length() {
     return data.length;
