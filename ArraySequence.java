@@ -13,6 +13,7 @@ public class ArraySequence implements IntegerSequence{
     for (int i = 0; other.hasNext() == true; i++) {
       data[i] = other.next();
     }
+    other.reset();
   }
   public boolean hasNext() {
     return currentIndex < data.length;
